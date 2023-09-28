@@ -8,8 +8,7 @@ This is a simple ASP.NET MVC project that implements CRUD (Create, Read, Update,
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [License](#license)
-
+  
 ## Introduction
 
 The CRUD Project - Student Department System is an ASP.NET MVC application designed to streamline the management of student records and academic departments within a university or educational institution. The primary goal of this project is to provide a user-friendly interface for performing essential CRUD operations on both departments and student records.
@@ -46,8 +45,5 @@ If you'd like to contribute to this project, please follow these guidelines:
 - Push to your branch: `git push origin feature/your-feature-name`
 - Create a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE.md).
 
 
