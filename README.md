@@ -1,6 +1,6 @@
 # Student Department System
 
-This is a simple ASP.NET MVC project that implements CRUD (Create, Read, Update, Delete) operations for both departments and students in a university system.
+
 
 ## Table of Contents
 - [Introduction](#introduction)
