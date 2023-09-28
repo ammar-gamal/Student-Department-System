@@ -18,11 +18,11 @@ This project simplifies the administrative tasks associated with student and dep
 
 ## Features
 
-**- Create:** Easily add new department or student records to the system.
-**- Read:** Retrieve and view information about departments and students efficiently.
-**- Update:** Edit and update details of existing departments or student profiles.
-**- Delete:** Remove outdated or unnecessary records from the database.
-**- User-friendly interface for managing data.**
+- **Create:** Easily add new department or student records to the system.
+- **Read:** Retrieve and view information about departments and students efficiently.
+- **Update:** Edit and update details of existing departments or student profiles.
+- **Delete:** Remove outdated or unnecessary records from the database.
+- **User-friendly interface for managing data.**
 
 ## Prerequisites
 
