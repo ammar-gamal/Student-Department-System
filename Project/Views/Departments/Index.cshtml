@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Department>
+@{
+    ViewBag.Title = "Department List";
+}
+<h1 class="alert alert-danger text-center">Departments</h1>
+<a asp-controller="departments" asp-action="create" class="btn btn-success">Create <span class="badge bg-info">@Model.Count()</span></a>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.deptId</td>
+                    <td>@item.deptName</td>
+                    <td>
+@*                     <a href="/departments/delete?deptId=@item.deptId" onclick="return confirm ('are you sure? ')" class="btn btn-danger">Delete</a>
+                    <a href="/departments/update?deptid=@item.deptId" class="btn btn-secondary" title="Redirection">Update</a>
+                    <a href="/departments/details?deptid=@item.deptId " title="Redirection" class=" btn btn-info">Details </a> *@
+                    <a asp-controller="departments" asp-action="delete" asp-route-Deptid="@item.deptId" onclick="return confirm ('are you sure? ')" class="btn btn-danger">Delete</a>
+                    <a asp-controller="departments" asp-action="update" asp-route-Deptid="@item.deptId" class="btn btn-secondary" title="Redirection">Update</a>
+                    <a asp-controller="departments" asp-action="details" asp-route-Deptid="@item.deptId" class="btn btn-info" title="Redirection">Details</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

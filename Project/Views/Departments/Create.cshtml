@@ -1,0 +1,23 @@
+﻿@model Department
+@{
+
+    ViewBag.Title = "Department Create";
+}
+<div id="CreateForm">
+   <form asp-controller="departments" asp-action="create" method="POST">
+        <h1 class="form-header">Adding Department</h1>
+        <label asp-for="deptName"></label><input asp-for="deptName" /><span asp-validation-for="deptName"></span>
+        <label asp-for="deptId"></label><input asp-for="deptId" /><span asp-validation-for="deptId"></span> 
+
+        <div class="Buttons">
+            <input type="submit" value="Add" />
+            <input type="Reset" />
+            <a class="button-link" asp-controller="departments" asp-action="index">Back</a>
+        </div>
+
+    </form>
+</div>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

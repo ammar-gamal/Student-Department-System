@@ -1,0 +1,50 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Student Update";
+}
+
+
+
+    <form asp-controller="students" asp-action="update" asp-route-id="@Model.id" method="POST">
+        <h1 class="form-header">Student Update</h1>
+    <div id="input">
+        <label asp-for="Name"></label> </b><input asp-for="Name" /><span asp-validation-for="Name"></span>
+        <label asp-for="Address"></label> </b><input asp-for="Address" /><span asp-validation-for="Address"></span>
+        <label asp-for="Email"></label> </b><input asp-for="Email" /><span asp-validation-for="Email"></span>
+        <label asp-for="Password"></label> </b><input asp-for="Password" type="password" /><span asp-validation-for="Password"></span>
+        <label asp-for="CPassword"></label> </b><input asp-for="CPassword" type="password" /><span asp-validation-for="CPassword"></span>
+        <label asp-for="DoB"></label> </b><input asp-for="DoB" type="date" /><span asp-validation-for="DoB"></span>
+
+        <div class="gender-container">
+            <label for="Gender">Gender</label>
+            <div class="radio-group">
+                <input id="Male" asp-for="Gender" type="radio" value="Male" />
+                <label for="Male" asp-for="Gender">Male</label>
+            </div>
+            <div class="radio-group">
+                <input id="Female" asp-for="Gender" type="radio" value="Female" />
+                <label for="Female" asp-for="Gender">Female</label>
+            </div>
+        </div>
+        <span asp-validation-for="Gender"></span>
+
+        <div id="departments">
+            <label asp-for="DeptNo"></label>
+            <select asp-for="DeptNo" asp-items="ViewBag.departments">
+                <option value="">No Department Selected</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div id="redire">
+        <input type="submit" value="Update" />
+        <input type="Reset" />
+        <a class="button-link" asp-controller="students" asp-action="index">Back</a>
+    </div>
+
+    </form>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

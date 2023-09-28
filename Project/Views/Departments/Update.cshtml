@@ -1,0 +1,17 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Update Department";
+}
+<div id="CreateForm">
+    <form asp-controller="departments" asp-action="update" asp-route-DeptId="@Model.deptId" method="POST">
+        <h1 class="form-header">Department Update</h1>
+        <label asp-for="deptName"></label><input asp-for="deptName" /><span asp-validation-for="deptName"></span>
+
+        <div class="Buttons">
+            <input type="submit" value="Update" />
+            <input type="Reset" />
+            <a class="button-link" asp-controller="departments" asp-action="index">Back</a>
+        </div>
+
+    </form>
+</div>

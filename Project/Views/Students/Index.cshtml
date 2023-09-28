@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Student>
+@{
+    ViewBag.Title = "Student List";
+}
+<h1 class="alert alert-danger text-center">Students</h1>
+<a asp-action="create" asp-controller="students" class="btn btn-success">Create  <span class="badge bg-info">@Model.Count()</span></a>
+   @*  <a href="/students/create" class="btn btn-success">Create  <span class="badge bg-info">@Model.Count()</span></a> *@
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department Name</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.Name</td>
+                    <td>@(item.Department?.deptName??"None")</td>
+                    <td>
+                    <a asp-controller="students" asp-action="details"  asp-route-id="@item.id" title="Redirection" class="btn btn-info">Details</a>
+                    <a asp-controller="students" asp-action="delete" asp-route-id="@item.id" onclick="return confirm ('are you sure? ')" title="Redirection" class="btn btn-danger">Delete</a>
+                    <a asp-controller="students" asp-action="update" asp-route-id="@item.id" title="Redirection" class="btn btn-secondary">Update</a>
+                    </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>

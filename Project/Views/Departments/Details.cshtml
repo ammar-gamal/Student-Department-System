@@ -1,0 +1,44 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Department Details";
+    int size = Model.Students.Count();
+    List<Student> StudList = Model.Students.ToList();
+}
+<h1 class="alert alert-danger text-center">@(Model.deptName) Students </h1>
+<h3 class="btn btn-success">Total Students  <span class="badge bg-info">@size</span></h3>
+<table class="table table-hover table-bordered">
+    <thead >
+        <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+     
+            @foreach(var item in StudList)
+            {<tr>
+                   
+                <td>@item.Name</td>
+                <td>@item.id</td>
+                <td>
+                    <a asp-controller="departments" asp-action="StudentDetails" asp-route-id="@item.id" title="Redirection" class="btn btn-info">Details</a>
+                    <a asp-controller="departments" asp-action="DeleteStudent" asp-route-id="@item.id" onclick="return confirm ('are you sure? ')" title="Redirection" class="btn btn-danger">Delete</a>
+                  @*   <a href="/departments/StudentDetails/@item.id " title="Redirection" class=" btn btn-info">Details </a> 
+                    <a href="/departments/DeleteStudent/@item.id" onclick="return confirm ('are you sure? ')" title="Redirection" class="btn btn-danger">Delete</a> *@
+                </td>
+              
+               
+            </tr>
+            
+            }
+       
+      
+    </tbody>
+
+</table>
+
+<a class="button-link CenterBack" asp-controller="departments" asp-action="index" asp-route-Deptid="@Model.deptId">Back</a>
+
+
+

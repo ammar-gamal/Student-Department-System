@@ -1,0 +1,14 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Student Details";
+}
+<h2 class="alert alert-danger">
+    <b>Name:</b>  @Model.Name         <br />
+    <b>Password:</b> @Model.Password  <br />
+    <b>Email:</b> @Model.Email        <br />
+    <b>Gender:</b> @Model.Gender      <br />
+    <b>Age:</b> @Model.Age            <br />
+    <b>Address:</b> @Model.Address    <br />
+    <b>BirthDate:</b> @(Model.DoB.ToString("yyyy-MM-dd"))  <br />
+</h2>
+<a asp-controller="departments" asp-action="Details" asp-route-Deptid="@Model.DeptNo" class="button-link CenterBack">Back</a>

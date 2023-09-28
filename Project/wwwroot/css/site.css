@@ -1,0 +1,150 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.field-validation-error {
+    color: red;
+    margin-top: 5px;
+}
+form {
+    max-width: 500px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 30px; /* Add some padding around the form */
+    border: 1px solid #a13dc7; /* Add a border to the form */
+    border-radius: 10px; /* Round the corners */
+    background-color: #d1cfcc; /* Set a background color */
+}
+.form-header {
+    display: flex; /* Labels as block elements for better spacing */
+    margin-bottom: 15px; /* Space between labels */
+    font-weight: bolder; /* Make labels bold for better readability */
+    color: #000000;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 10vh;
+}
+form label {
+    display: block; /* Labels as block elements for better spacing */
+    margin-bottom: 15px; /* Space between labels */
+    font-weight: bolder; /* Make labels bold for better readability */
+    color: #a13dc7;
+}
+/* Change the color of labels for each input field */
+label[for="Male"] {
+    color: #000000; /* Black color for the "Male" label */
+
+}
+
+label[for="Female"] {
+    color: #000000; /* Black color for the "Female" label */
+}
+/* Center-align the text and elements within the gender container */
+.gender-container {
+    text-align: left;
+}
+
+/* Style the Gender label */
+.gender-container label[for="Gender"] {
+    display: block; /* Display it as a block element */
+    margin-bottom: 10px; /* Add space below the Gender label */
+}
+
+/* Style the radio button groups */
+.radio-group {
+    display: inline-block; /* Display radio groups inline */
+    margin: 0 10px; /* Add space between radio groups */
+    margin-left: 10px;
+}
+
+/* Style the labels for Male and Female */
+.radio-group label {
+    display: block; /* Display labels as block elements */
+   
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Expand input elements to full width */
+    padding: 10px; /* Add padding inside input elements */
+    margin-bottom: 15px; /* Space between input elements */
+    border: 1px solid #ccc; /* Add borders to input elements */
+    border-radius: 5px; /* Round the corners of input elements */
+}
+input[type="submit"] {
+
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Round the button corners */
+    cursor: pointer; /* Change cursor style on hover */
+    transition: background-color 0.5s; /* Add a smooth transition for background color */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+input[type="reset"] {
+  
+    background-color: #ff006e; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Round the button corners */
+    cursor: pointer; /* Change cursor style on hover */
+    transition: background-color 0.5s; /* Add a smooth transition for background color */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+.button-link {
+    display: inline-block;
+    background-color: #d027b9; /* Button background color */
+    text-decoration: none;
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Round the button corners */
+    cursor: pointer; /* Change cursor style on hover */
+    transition: background-color 0.5s; /* Add a smooth transition for background color */
+    box-sizing: border-box; /* Include padding and border in the width */
+    float: right; /* Float the link button to the left */
+}
+.CenterBack {
+    line-height: 2;
+    position: absolute;
+    bottom: 100px;
+    left:700px;
+}
+input[type="submit"]:hover {
+    background-color: #37b27c; /* Change the background color on hover */
+}
+input[type="reset"]:hover {
+    background-color: #ec7b7b; /* Change the background color on hover */
+}
+.button-link:hover {
+        background-color: #000000; /* Change the background color on hover */
+        color: #fff
+}
+.button-link, input[type="reset"], input[type="submit"] {
+    margin-top: 40px; /* Add margin to create space above the buttons */
+    border-right-style: dotted;
+    border-left-style: dotted;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+}    
